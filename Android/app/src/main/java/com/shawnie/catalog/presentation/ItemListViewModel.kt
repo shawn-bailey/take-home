@@ -1,4 +1,4 @@
-package com.shawnie.catalog.ui
+package com.shawnie.catalog.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

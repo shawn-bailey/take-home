@@ -1,4 +1,4 @@
-package com.shawnie.catalog.ui.model
+package com.shawnie.catalog.presentation.model
 
 /**
  * Data class representing gastronomically significant toast

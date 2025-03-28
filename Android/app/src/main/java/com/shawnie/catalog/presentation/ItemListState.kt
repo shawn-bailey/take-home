@@ -1,6 +1,6 @@
-package com.shawnie.catalog.ui
+package com.shawnie.catalog.presentation
 
-import com.shawnie.catalog.ui.model.ItemUiModel
+import com.shawnie.catalog.presentation.model.ItemUiModel
 
 /**
  * Representative UI state for displaying list of toast items

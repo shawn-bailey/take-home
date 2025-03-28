@@ -3,9 +3,10 @@ package com.shawnie.catalog.data
 import android.util.Log
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import com.shawnie.catalog.common.EURO
 import com.shawnie.catalog.remote.NetworkClient
 import com.shawnie.catalog.remote.NetworkClientImpl
-import com.shawnie.catalog.ui.model.ItemUiModel
+import com.shawnie.catalog.presentation.model.ItemUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.Instant

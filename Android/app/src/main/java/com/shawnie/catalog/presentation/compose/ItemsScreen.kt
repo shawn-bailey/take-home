@@ -1,4 +1,4 @@
-package com.shawnie.catalog.ui.compose
+package com.shawnie.catalog.presentation.compose
 
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.shawnie.catalog.ui.ItemListViewModel
+import com.shawnie.catalog.presentation.ItemListViewModel
 
 @Composable
 fun ItemsScreen(itemViewModel: ItemListViewModel = viewModel()) {
