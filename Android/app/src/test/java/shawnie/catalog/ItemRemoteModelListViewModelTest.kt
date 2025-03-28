@@ -1,4 +1,4 @@
-package com.sumup.challenge.catalog
+package shawnie.catalog
 
 import com.shawnie.catalog.data.ItemsRepository
 import com.shawnie.catalog.ui.ItemListViewModel
@@ -7,7 +7,7 @@ import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
-class ItemListViewModelTest {
+class ItemRemoteModelListViewModelTest {
 
     @Test
     fun testFetchItemsOnViewModelCreate() = runBlocking {

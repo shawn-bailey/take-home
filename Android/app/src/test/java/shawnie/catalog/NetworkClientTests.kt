@@ -1,4 +1,4 @@
-package com.sumup.challenge.catalog
+package shawnie.catalog
 
 import com.shawnie.catalog.remote.NetworkClient
 import com.shawnie.catalog.remote.NetworkClientImpl
@@ -69,7 +69,8 @@ class NetworkClientTests {
             .message("")
             .body(
                 ResponseBody.create(
-            "application/json; charset=utf-8".toMediaType(), EXPECTED_RESPONSE_DATA))
+            "application/json; charset=utf-8".toMediaType(), EXPECTED_RESPONSE_DATA
+                ))
             .build()
 
         val result = networkClient.getItems()

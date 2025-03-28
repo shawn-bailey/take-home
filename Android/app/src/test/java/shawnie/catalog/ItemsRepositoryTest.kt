@@ -1,7 +1,7 @@
-package com.sumup.challenge.catalog
+package shawnie.catalog
 
 import android.util.Log
-import com.shawnie.catalog.data.Item
+import com.shawnie.catalog.data.ItemRemoteModel
 import com.shawnie.catalog.data.ItemsRepository
 import com.shawnie.catalog.data.ItemsRepositoryImpl
 import com.shawnie.catalog.remote.NetworkClient
@@ -34,7 +34,7 @@ class ItemsRepositoryTest {
         every { Log.e(any(), any()) } returns 0
         coEvery { mockNetworkClient.getItems() } returns ""
         val result = itemsRepository.getItems()
-        Assert.assertEquals(emptyList<Item>(), result)
+        Assert.assertEquals(emptyList<ItemRemoteModel>(), result)
     }
 
     @Test
@@ -43,6 +43,6 @@ class ItemsRepositoryTest {
         every { Log.e(any(), any()) } returns 0
         coEvery { mockNetworkClient.getItems() } returns UNEXPECTED_RESPONSE_DATA
         val result = itemsRepository.getItems()
-        Assert.assertEquals(emptyList<Item>(), result)
+        Assert.assertEquals(emptyList<ItemRemoteModel>(), result)
     }
 }

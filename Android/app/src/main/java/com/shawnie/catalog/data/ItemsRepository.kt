@@ -26,8 +26,8 @@ class ItemsRepositoryImpl(
 
         try {
             val gson = GsonBuilder().create()
-            val typeToken = object : TypeToken<List<Item>>() {}.type
-            val responseList = gson.fromJson<List<Item>>(response, typeToken)
+            val typeToken = object : TypeToken<List<ItemRemoteModel>>() {}.type
+            val responseList = gson.fromJson<List<ItemRemoteModel>>(response, typeToken)
             val itemUiModelList: MutableList<ItemUiModel> = mutableListOf()
 
             //Lets transform the date to something human readable here
