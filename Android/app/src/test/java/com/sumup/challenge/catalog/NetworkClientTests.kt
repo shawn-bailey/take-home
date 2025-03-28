@@ -1,7 +1,7 @@
-package com.sumup.challenge.toastcatalog
+package com.sumup.challenge.catalog
 
-import com.sumup.challenge.toastcatalog.remote.NetworkClient
-import com.sumup.challenge.toastcatalog.remote.NetworkClientImpl
+import com.shawnie.catalog.remote.NetworkClient
+import com.shawnie.catalog.remote.NetworkClientImpl
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.*

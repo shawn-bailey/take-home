@@ -1,9 +1,9 @@
-package com.sumup.challenge.toastcatalog.ui
+package com.shawnie.catalog.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sumup.challenge.toastcatalog.data.ItemsRepository
-import com.sumup.challenge.toastcatalog.data.ItemsRepositoryImpl
+import com.shawnie.catalog.data.ItemsRepository
+import com.shawnie.catalog.data.ItemsRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update

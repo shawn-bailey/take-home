@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace 'com.sumup.challenge.toastcatalog'
+    namespace 'com.shawnie.catalog'
 
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.sumup.challenge.toastcatalog"
+        applicationId "com.shawnie.catalog"
         minSdk 26
         targetSdk 34
         versionCode 1

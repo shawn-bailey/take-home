@@ -1,4 +1,4 @@
-package com.sumup.challenge.toastcatalog.ui.model
+package com.shawnie.catalog.ui.model
 
 /**
  * Data class representing gastronomically significant toast

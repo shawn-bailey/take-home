@@ -1,4 +1,4 @@
-package com.sumup.challenge.toastcatalog.ui.compose
+package com.shawnie.catalog.ui.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -17,8 +17,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sumup.challenge.toastcatalog.data.Item
-import com.sumup.challenge.toastcatalog.ui.model.ItemUiModel
+import com.shawnie.catalog.data.Item
+import com.shawnie.catalog.ui.model.ItemUiModel
 
 
 @Composable

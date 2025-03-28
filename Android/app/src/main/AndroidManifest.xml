@@ -10,7 +10,7 @@
       android:theme="@style/Theme.ToastCatalog"
       tools:targetApi="31">
         <activity
-          android:name=".ItemsActivity"
+          android:name="com.shawnie.catalog.ItemsActivity"
           android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

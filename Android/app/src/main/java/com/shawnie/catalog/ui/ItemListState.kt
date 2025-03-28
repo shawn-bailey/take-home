@@ -1,6 +1,6 @@
-package com.sumup.challenge.toastcatalog.ui
+package com.shawnie.catalog.ui
 
-import com.sumup.challenge.toastcatalog.data.Item
+import com.shawnie.catalog.data.Item
 
 /**
  * Representative UI state for displaying list of toast items

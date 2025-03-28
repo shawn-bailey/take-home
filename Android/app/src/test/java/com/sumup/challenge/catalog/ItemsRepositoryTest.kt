@@ -1,10 +1,10 @@
-package com.sumup.challenge.toastcatalog
+package com.sumup.challenge.catalog
 
 import android.util.Log
-import com.sumup.challenge.toastcatalog.data.Item
-import com.sumup.challenge.toastcatalog.data.ItemsRepository
-import com.sumup.challenge.toastcatalog.data.ItemsRepositoryImpl
-import com.sumup.challenge.toastcatalog.remote.NetworkClient
+import com.shawnie.catalog.data.Item
+import com.shawnie.catalog.data.ItemsRepository
+import com.shawnie.catalog.data.ItemsRepositoryImpl
+import com.shawnie.catalog.remote.NetworkClient
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

@@ -1,4 +1,4 @@
-package com.sumup.challenge.toastcatalog.remote
+package com.shawnie.catalog.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.Request

@@ -1,11 +1,11 @@
-package com.sumup.challenge.toastcatalog.data
+package com.shawnie.catalog.data
 
 import android.util.Log
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import com.sumup.challenge.toastcatalog.remote.NetworkClient
-import com.sumup.challenge.toastcatalog.remote.NetworkClientImpl
-import com.sumup.challenge.toastcatalog.ui.model.ItemUiModel
+import com.shawnie.catalog.remote.NetworkClient
+import com.shawnie.catalog.remote.NetworkClientImpl
+import com.shawnie.catalog.ui.model.ItemUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.Instant
