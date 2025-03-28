@@ -85,12 +85,11 @@ fun ItemNumber(value: Int = 1) {
 @Preview
 @Composable
 fun ListPreview() {
-    val item = Item(
+    val item = ItemUiModel(
         name = "Item Name Here",
-        price = "500.00",
+        price = "$500.00",
         id = 1,
-        currency = "EUR",
-        last_sold = "2020-11-28T15:14:22Z"
+        lastSold = "2020-11-28T15:14:22Z"
     )
     LazyColumnItem(item)
 }
