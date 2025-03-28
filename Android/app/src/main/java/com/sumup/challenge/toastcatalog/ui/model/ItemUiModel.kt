@@ -1,12 +1,11 @@
-package com.sumup.challenge.toastcatalog.data
+package com.sumup.challenge.toastcatalog.ui.model
 
 /**
  * Data class representing gastronomically significant toast
  */
-data class Item(
+data class ItemUiModel(
     val name: String = "",
     val price: String = "",
     val id: Int = 0,
-    val currency: String = "",
-    val last_sold: String = ""
+    val lastSold: String = ""
 )

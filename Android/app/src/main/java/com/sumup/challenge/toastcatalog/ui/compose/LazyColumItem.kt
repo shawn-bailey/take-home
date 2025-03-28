@@ -18,10 +18,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sumup.challenge.toastcatalog.data.Item
+import com.sumup.challenge.toastcatalog.ui.model.ItemUiModel
 
 
 @Composable
-fun LazyColumnItem(item: Item) {
+fun LazyColumnItem(item: ItemUiModel) {
     Surface {
         Row(
             modifier = Modifier
@@ -39,18 +40,14 @@ fun LazyColumnItem(item: Item) {
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Row {
-                    val priceString = when (item.currency) {
-                        EURO -> item.price + "€"
-                        else -> { "$" }
-                    }
                     Text(
-                        text = priceString,
+                        text = item.price,
                         fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.weight(1f))
                     Text(
-                        text = item.last_sold,
+                        text = item.lastSold,
                         fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.onSurface
                     )

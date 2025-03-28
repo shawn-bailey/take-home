@@ -1,7 +1,7 @@
 package com.sumup.challenge.toastcatalog
 
 import com.sumup.challenge.toastcatalog.data.ItemsRepository
-import com.sumup.challenge.toastcatalog.ui.compose.ItemListViewModel
+import com.sumup.challenge.toastcatalog.ui.ItemListViewModel
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking

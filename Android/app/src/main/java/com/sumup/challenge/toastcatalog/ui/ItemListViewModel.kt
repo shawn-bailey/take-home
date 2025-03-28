@@ -1,16 +1,13 @@
-package com.sumup.challenge.toastcatalog.ui.compose
+package com.sumup.challenge.toastcatalog.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sumup.challenge.toastcatalog.data.ItemsRepository
 import com.sumup.challenge.toastcatalog.data.ItemsRepositoryImpl
-import com.sumup.challenge.toastcatalog.ui.ItemListState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-
-const val EURO = "EUR"
 
 /**
  * View model that transfers toast items state to the compose view
