@@ -1,11 +1,12 @@
-package com.shawnie.catalog.data
+package com.shawnie.catalog.domain.data
 
 import android.util.Log
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import com.shawnie.catalog.common.CURRENCY_MAP
 import com.shawnie.catalog.common.EURO
-import com.shawnie.catalog.remote.NetworkClient
-import com.shawnie.catalog.remote.NetworkClientImpl
+import com.shawnie.catalog.domain.remote.NetworkClient
+import com.shawnie.catalog.domain.remote.NetworkClientImpl
 import com.shawnie.catalog.presentation.model.ItemUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -39,10 +40,8 @@ class ItemsRepositoryImpl(
                 val dateString = Instant.parse(it.last_sold).atOffset(ZoneOffset.UTC).format(
                     DateTimeFormatter.ofPattern( "MM/dd/uu HH:mm a" ) )
 
-                val priceString = when (it.currency) {
-                    EURO -> it.price + "€"
-                    else -> { "$" }
-                }
+                val priceString = it.price + CURRENCY_MAP[it.currency]
+
                 itemUiModelList.add(
                     ItemUiModel(
                         name = it.name,

@@ -1,6 +1,6 @@
 package shawnie.catalog
 
-import com.shawnie.catalog.data.ItemsRepository
+import com.shawnie.catalog.domain.data.ItemsRepository
 import com.shawnie.catalog.presentation.ItemListViewModel
 import io.mockk.coVerify
 import io.mockk.mockk

@@ -1,7 +1,7 @@
 package shawnie.catalog
 
-import com.shawnie.catalog.remote.NetworkClient
-import com.shawnie.catalog.remote.NetworkClientImpl
+import com.shawnie.catalog.domain.remote.NetworkClient
+import com.shawnie.catalog.domain.remote.NetworkClientImpl
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.*

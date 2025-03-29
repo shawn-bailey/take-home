@@ -1,4 +1,4 @@
-package com.shawnie.catalog.remote
+package com.shawnie.catalog.domain.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.Request

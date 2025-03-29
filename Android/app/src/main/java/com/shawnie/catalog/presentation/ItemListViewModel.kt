@@ -2,8 +2,8 @@ package com.shawnie.catalog.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.shawnie.catalog.data.ItemsRepository
-import com.shawnie.catalog.data.ItemsRepositoryImpl
+import com.shawnie.catalog.domain.data.ItemsRepository
+import com.shawnie.catalog.domain.data.ItemsRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update

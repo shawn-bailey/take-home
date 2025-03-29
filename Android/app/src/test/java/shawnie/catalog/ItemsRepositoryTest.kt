@@ -1,10 +1,10 @@
 package shawnie.catalog
 
 import android.util.Log
-import com.shawnie.catalog.data.ItemRemoteModel
-import com.shawnie.catalog.data.ItemsRepository
-import com.shawnie.catalog.data.ItemsRepositoryImpl
-import com.shawnie.catalog.remote.NetworkClient
+import com.shawnie.catalog.domain.data.ItemRemoteModel
+import com.shawnie.catalog.domain.data.ItemsRepository
+import com.shawnie.catalog.domain.data.ItemsRepositoryImpl
+import com.shawnie.catalog.domain.remote.NetworkClient
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

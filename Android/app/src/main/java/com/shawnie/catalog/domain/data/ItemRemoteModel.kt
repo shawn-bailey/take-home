@@ -1,4 +1,4 @@
-package com.shawnie.catalog.data
+package com.shawnie.catalog.domain.data
 
 /**
  * Data class representing gastronomically significant toast
