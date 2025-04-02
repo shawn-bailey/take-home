@@ -1,5 +1,6 @@
 package com.shawnie.catalog.domain.data
 
+import com.google.gson.annotations.SerializedName
 import com.shawnie.catalog.common.CURRENCY_MAP
 import com.shawnie.catalog.presentation.model.ItemUiModel
 import java.time.Instant
@@ -14,7 +15,8 @@ data class ItemRemoteModel(
     val price: String = "",
     val id: Int = 0,
     val currency: String = "",
-    val last_sold: String = ""
+    @SerializedName("last_sold")
+    val lastSold: String = ""
 )
 
 fun ItemRemoteModel.toItemUiModel(): ItemUiModel {
@@ -28,7 +30,11 @@ fun ItemRemoteModel.toItemUiModel(): ItemUiModel {
 
 fun ItemRemoteModel.priceString() = price + CURRENCY_MAP[currency]
 
-fun ItemRemoteModel.dateString(): String = Instant.parse(last_sold)
+//Lets transform the date to something human readable here
+//This will ensure we arent parsing dates every composition
+//We could also do the currency conversion here, for now it is in the composable
+//"2020-11-28T15:14:22Z"
+fun ItemRemoteModel.dateString(): String = Instant.parse(lastSold)
     .atOffset(ZoneOffset.UTC)
     .format(DateTimeFormatter
         .ofPattern( "MM/dd/uu HH:mm a" )
