@@ -14,14 +14,14 @@ import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 interface ItemsRepository {
-    suspend fun getItems(): List<ItemUiModel>
+    suspend fun getItems(): List<ItemRemoteModel>
 }
 
 class ItemsRepositoryImpl(
     val remoteSource: NetworkClient = NetworkClientImpl()
 ): ItemsRepository {
 
-    override suspend fun getItems(): List<ItemUiModel> = withContext(Dispatchers.IO) {
+    override suspend fun getItems(): List<ItemRemoteModel> = withContext(Dispatchers.IO) {
 
         val response = remoteSource.getItems()
 
@@ -34,7 +34,7 @@ class ItemsRepositoryImpl(
             responseList.map {
                 itemUiModelList.add(it.toItemUiModel())
             }
-            return@withContext itemUiModelList
+            return@withContext responseList
         } catch (e: Exception) {
             Log.e("Error", e.stackTraceToString())
             return@withContext emptyList()
