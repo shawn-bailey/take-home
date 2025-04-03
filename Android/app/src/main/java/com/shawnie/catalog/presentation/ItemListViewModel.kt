@@ -2,6 +2,7 @@ package com.shawnie.catalog.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.shawnie.catalog.domain.data.ItemUseCase
 import com.shawnie.catalog.domain.data.ItemsRepository
 import com.shawnie.catalog.domain.data.ItemsRepositoryImpl
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +14,7 @@ import kotlinx.coroutines.launch
  * View model that transfers toast items state to the compose view
  */
 class ItemListViewModel(
-    val itemsRepository: ItemsRepository = ItemsRepositoryImpl()
+    val itemUseCase: ItemUseCase = ItemUseCase()
 ): ViewModel() {
 
     val stateFlow: MutableStateFlow<ItemListState> = MutableStateFlow(ItemListState())
