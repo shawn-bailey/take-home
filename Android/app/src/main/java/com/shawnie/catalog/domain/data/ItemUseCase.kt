@@ -5,9 +5,11 @@ import com.shawnie.catalog.presentation.model.ItemUiModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import okio.IOException
+import javax.inject.Inject
 
-class ItemUseCase (val repository: ItemsRepository) {
-
+class ItemUseCase @Inject constructor (
+    val repository: ItemsRepository
+) {
     operator fun invoke(): Flow<Resource<List<ItemUiModel>>> = flow {
         try {
             emit(Resource.Loading())
