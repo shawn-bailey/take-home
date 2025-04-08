@@ -14,11 +14,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.shawnie.catalog.presentation.ItemListViewModel
 
 @Composable
-fun ItemsScreen(itemViewModel: ItemListViewModel = viewModel()) {
+fun ItemsScreen(itemViewModel: ItemListViewModel = hiltViewModel()) {
 
     val itemState by itemViewModel.stateFlow.collectAsState()
 

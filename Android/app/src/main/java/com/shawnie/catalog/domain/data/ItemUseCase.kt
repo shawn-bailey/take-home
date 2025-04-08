@@ -2,10 +2,12 @@ package com.shawnie.catalog.domain.data
 
 import com.shawnie.catalog.common.Resource
 import com.shawnie.catalog.presentation.model.ItemUiModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import okio.IOException
 import javax.inject.Inject
+
 
 class ItemUseCase @Inject constructor (
     val repository: ItemsRepository

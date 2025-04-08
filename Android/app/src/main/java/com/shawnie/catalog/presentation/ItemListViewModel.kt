@@ -6,6 +6,7 @@ import com.shawnie.catalog.common.Resource
 import com.shawnie.catalog.domain.data.ItemUseCase
 import com.shawnie.catalog.domain.data.ItemsRepository
 import com.shawnie.catalog.domain.data.ItemsRepositoryImpl
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
@@ -17,6 +18,7 @@ import javax.inject.Inject
 /**
  * View model that transfers toast items state to the compose view
  */
+@HiltViewModel
 class ItemListViewModel @Inject constructor (
     val itemUseCase: ItemUseCase
 ): ViewModel() {
