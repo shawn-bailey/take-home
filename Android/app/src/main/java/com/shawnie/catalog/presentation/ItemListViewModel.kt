@@ -22,7 +22,7 @@ class ItemListViewModel @Inject constructor (
 ): ViewModel() {
 
     val stateFlow: MutableStateFlow<ItemListState> = MutableStateFlow(ItemListState())
-    
+
     init {
          getItems()
     }
