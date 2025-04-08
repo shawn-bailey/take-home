@@ -8,6 +8,7 @@ import com.shawnie.catalog.domain.data.ItemsRepository
 import com.shawnie.catalog.domain.data.ItemsRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -21,37 +22,37 @@ class ItemListViewModel @Inject constructor (
 ): ViewModel() {
 
     val stateFlow: MutableStateFlow<ItemListState> = MutableStateFlow(ItemListState())
-
     
-
     init {
-        viewModelScope.launch(Dispatchers.IO) {
-            itemUseCase().onEach { result ->
-                when(result) {
-                    is Resource.Success -> {
-                        stateFlow.update { currentState ->
-                            currentState.copy(
-                                itemList = result.data ?: emptyList(),
-                                loading = false
-                            )
-                        }
+         getItems()
+    }
+
+    private fun getItems() {
+        itemUseCase().onEach { result ->
+            when(result) {
+                is Resource.Success -> {
+                    stateFlow.update { currentState ->
+                        currentState.copy(
+                            itemList = result.data ?: emptyList(),
+                            loading = false
+                        )
                     }
-                    is Resource.Error<*> ->  {
-                        stateFlow.update { currentState ->
-                            currentState.copy(
-                                loading = false
-                            )
-                        }
+                }
+                is Resource.Error<*> ->  {
+                    stateFlow.update { currentState ->
+                        currentState.copy(
+                            loading = false
+                        )
                     }
-                    is Resource.Loading<*> -> {
-                        stateFlow.update { currentState ->
-                            currentState.copy(
-                                loading = true
-                            )
-                        }
+                }
+                is Resource.Loading<*> -> {
+                    stateFlow.update { currentState ->
+                        currentState.copy(
+                            loading = true
+                        )
                     }
                 }
             }
-        }
+        }.launchIn(viewModelScope)
     }
 }
