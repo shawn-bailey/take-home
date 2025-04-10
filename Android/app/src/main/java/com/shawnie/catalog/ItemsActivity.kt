@@ -3,8 +3,11 @@ package com.shawnie.catalog
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
 import com.shawnie.catalog.presentation.compose.ItemsScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +20,9 @@ class ItemsActivity : AppCompatActivity() {
         setContent {
             MaterialTheme {
                 Surface {
-                    ItemsScreen()
+                    Box(Modifier.safeDrawingPadding()) {
+                        ItemsScreen()
+                    }
                 }
             }
         }
